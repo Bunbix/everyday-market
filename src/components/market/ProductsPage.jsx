@@ -1,5 +1,6 @@
 ﻿import { useState, useEffect } from 'react';
 import CategoryMenu from './CategoryMenu';
+import { loadCategories } from './services/marketService';
 import './ProductsPage.css';
 
 function ProductsPage() {
@@ -7,21 +8,6 @@ function ProductsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadCategories = () => {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          const categoryList = [
-            { id: 1, name: 'Fresh Fruits' },
-            { id: 2, name: 'Vegetables' },
-            { id: 3, name: 'Dairy Products' },
-            { id: 4, name: 'Bakery Items' },
-            { id: 5, name: 'Beverages' }
-          ];
-          resolve(categoryList);
-        }, 2000);
-      });
-    };
-
     loadCategories().then((data) => {
       setCategories(data);
       setLoading(false);
