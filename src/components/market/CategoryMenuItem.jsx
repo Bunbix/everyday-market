@@ -1,7 +1,9 @@
-﻿function CategoryMenuItem({ category, onSelect }) {
+﻿import './CategoryMenuItem.css';
+
+function CategoryMenuItem({ category, isSelected, onSelect }) {
   return (
     <div 
-      className="category-card"
+      className={`category-card${isSelected ? ' selected' : ''}`}
       onClick={() => onSelect(category.name)}
     >
       <div className="category-icon">📦</div>
