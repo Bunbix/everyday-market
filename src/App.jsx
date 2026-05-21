@@ -10,7 +10,7 @@ function App() {
         <ProductsPage />
       </main>
       <footer className="app-footer">
-        <p>&copy; 2024 Everyday Market. All rights reserved.</p>
+        <p>&copy; 2026 Everyday Market. All rights reserved.</p>
       </footer>
     </div>
   );
